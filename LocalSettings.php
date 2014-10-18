@@ -12,7 +12,7 @@
 
 # Protect against web entry
 if ( !defined( 'MEDIAWIKI' ) ) {
-	exit;
+  exit;
 }
 
 ## Uncomment this to disable output compression
@@ -47,8 +47,8 @@ $wgEnableUserEmail = true; # UPO
 $wgEmergencyContact = "apache@localhost";
 $wgPasswordSender = "apache@localhost";
 
-$wgEnotifUserTalk = false; # UPO
-$wgEnotifWatchlist = false; # UPO
+$wgEnotifUserTalk = true; # UPO
+$wgEnotifWatchlist = true; # UPO
 $wgEmailAuthentication = true;
 
 ## Database settings
@@ -73,7 +73,7 @@ $wgMemCachedServers = array();
 
 ## To enable image uploads, make sure the 'images' directory
 ## is writable, then set this to true:
-$wgEnableUploads = false;
+$wgEnableUploads = true;
 #$wgUseImageMagick = true;
 #$wgImageMagickConvertCommand = "/usr/bin/convert";
 
@@ -113,13 +113,36 @@ $wgDefaultSkin = "vector";
 ## appropriate copyright notice / icon. GNU Free Documentation
 ## License and Creative Commons licenses are supported so far.
 $wgRightsPage = ""; # Set to the title of a wiki page that describes your license/copyright
-$wgRightsUrl = "";
-$wgRightsText = "";
-$wgRightsIcon = "";
+$wgRightsUrl = "https://creativecommons.org/publicdomain/zero/1.0/";
+$wgRightsText = "Creative Commons Zero (Public Domain)";
+$wgRightsIcon = "{$wgStylePath}/common/images/cc-0.png";
 
 # Path to the GNU diff3 utility. Used for conflict resolution.
 $wgDiff3 = "/usr/bin/diff3";
 
+# The following permissions were set based on your choice in the installer
+$wgGroupPermissions['*']['createaccount'] = false;
+$wgGroupPermissions['*']['edit'] = false;
+
+# Enabled Extensions. Most extensions are enabled by including the base extension file here
+# but check specific extension documentation for more details
+# The following extensions were automatically enabled:
+require_once "$IP/extensions/Cite/Cite.php";
+require_once "$IP/extensions/ConfirmEdit/ConfirmEdit.php";
+require_once "$IP/extensions/Gadgets/Gadgets.php";
+require_once "$IP/extensions/ImageMap/ImageMap.php";
+require_once "$IP/extensions/InputBox/InputBox.php";
+require_once "$IP/extensions/Interwiki/Interwiki.php";
+require_once "$IP/extensions/LocalisationUpdate/LocalisationUpdate.php";
+require_once "$IP/extensions/Nuke/Nuke.php";
+require_once "$IP/extensions/ParserFunctions/ParserFunctions.php";
+require_once "$IP/extensions/PdfHandler/PdfHandler.php";
+require_once "$IP/extensions/Poem/Poem.php";
+require_once "$IP/extensions/Renameuser/Renameuser.php";
+require_once "$IP/extensions/SpamBlacklist/SpamBlacklist.php";
+require_once "$IP/extensions/SyntaxHighlight_GeSHi/SyntaxHighlight_GeSHi.php";
+require_once "$IP/extensions/TitleBlacklist/TitleBlacklist.php";
+require_once "$IP/extensions/WikiEditor/WikiEditor.php";
 
 
 # End of automatically generated settings.
