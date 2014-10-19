@@ -139,7 +139,11 @@ require_once "$IP/extensions/InputBox/InputBox.php";
 require_once "$IP/extensions/Interwiki/Interwiki.php";
 require_once "$IP/extensions/LocalisationUpdate/LocalisationUpdate.php";
 require_once "$IP/extensions/Nuke/Nuke.php";
+
+# Extension:ParserFunctions
 require_once "$IP/extensions/ParserFunctions/ParserFunctions.php";
+$wgPFEnableStringFunctions = true;
+
 require_once "$IP/extensions/PdfHandler/PdfHandler.php";
 require_once "$IP/extensions/Poem/Poem.php";
 require_once "$IP/extensions/Renameuser/Renameuser.php";
@@ -148,6 +152,14 @@ require_once "$IP/extensions/SyntaxHighlight_GeSHi/SyntaxHighlight_GeSHi.php";
 require_once "$IP/extensions/TitleBlacklist/TitleBlacklist.php";
 require_once "$IP/extensions/WikiEditor/WikiEditor.php";
 
+# Extension:Scribunto
+require_once "$IP/extensions/Scribunto/Scribunto.php";
+$wgScribuntoDefaultEngine = 'luastandalone';
+#$wgScribuntoUseGeSHi = true;
+#$wgScribuntoUseCodeEditor = true;
+
+$wgUseTidy = true;
+$wgAlwaysUseTidy = true;
 
 # End of automatically generated settings.
 # Add more configuration options below.
