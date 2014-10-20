@@ -173,6 +173,16 @@ $wgAlwaysUseTidy = true;
 
 $wgUseCategoryBrowser = true;
 
+$wgExtensionCredits['specialpage'][] = array(
+  'path' => __FILE__,
+  'name' => 'Example extension',
+  'version' => '1.9.0',
+  'author' => 'Foo Barstein',
+  'url' => 'https://www.mediawiki.org/wiki/Extension:MyExtension',
+  'descriptionmsg' => 'exampleextension-desc',
+  'license-name' => 'GPL-2.0+'
+);
+
 # End of automatically generated settings.
 # Add more configuration options below.
 
