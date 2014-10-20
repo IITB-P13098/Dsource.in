@@ -26,8 +26,8 @@ $wgMetaNamespace = "Project";
 ## For more information on customizing the URLs
 ## (like /w/index.php/Page_title to /wiki/Page_title) please see:
 ## https://www.mediawiki.org/wiki/Manual:Short_URL
-$wgScriptPath = "/dsource.in";
-$wgArticlePath = $wgScriptPath."/$1";
+$wgScriptPath = "/dsource.in/wiki";
+$wgArticlePath = "/dsource.in/$1";
 
 $actions = array( 'view', 'edit', 'watch', 'unwatch', 'delete','revert', 'rollback',
   'protect', 'unprotect', 'markpatrolled', 'render', 'submit', 'history', 'purge' );

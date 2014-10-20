@@ -9,6 +9,6 @@ RewriteEngine On
 # Redirect to Main Page
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php?/$1 [L]
+RewriteRule ^(.*)$ wiki/index.php?/$1 [L]
 
-RewriteRule ^/action/([a-z]*)/(.*)$ /index.php [L,QSA]
+RewriteRule ^/action/([a-z]*)/(.*)$ wiki/index.php [L,QSA]
