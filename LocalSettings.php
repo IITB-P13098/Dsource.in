@@ -29,6 +29,14 @@ $wgMetaNamespace = "Project";
 $wgScriptPath = "/dsource.in";
 $wgArticlePath = $wgScriptPath."/$1";
 
+$actions = array( 'view', 'edit', 'watch', 'unwatch', 'delete','revert', 'rollback',
+  'protect', 'unprotect', 'markpatrolled', 'render', 'submit', 'history', 'purge' );
+ 
+foreach ( $actions as $action ) {
+  $wgActionPaths[$action] = "$wgScriptPath/action/$action/$1";
+}
+#$wgArticlePath = $wgActionPaths['view'];
+
 $wgScriptExtension = ".php";
 
 ## The protocol and server name to use in fully-qualified URLs
