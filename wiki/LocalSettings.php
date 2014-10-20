@@ -37,6 +37,8 @@ foreach ( $actions as $action ) {
 }
 #$wgArticlePath = $wgActionPaths['view'];
 
+$wgUsePathInfo = true;
+
 $wgScriptExtension = ".php";
 
 ## The protocol and server name to use in fully-qualified URLs
