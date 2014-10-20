@@ -171,6 +171,8 @@ $wgScribuntoDefaultEngine = 'luastandalone';
 $wgUseTidy = true;
 $wgAlwaysUseTidy = true;
 
+$wgUseCategoryBrowser = true;
+
 # End of automatically generated settings.
 # Add more configuration options below.
 
