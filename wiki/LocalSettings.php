@@ -183,6 +183,12 @@ $wgExtensionCredits['specialpage'][] = array(
   'license-name' => 'GPL-2.0+'
 );
 
+# video extension
+require( "$IP/extensions/OggHandler/OggHandler.php" );
+$wgFFmpegLocation = 'extensions/ffmpeg';
+$wgOggThumbLocation = 'extensions/OggThumb/bin/oggThumb';
+
+
 # End of automatically generated settings.
 # Add more configuration options below.
 
