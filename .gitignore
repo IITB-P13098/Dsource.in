@@ -1,3 +1,6 @@
-images/deleted/[a-z]/*
-images/thumb/*
-images/[a-z]
+wiki/images/deleted/[a-z]/*
+wiki/images/thumb/*
+wiki/images/[0-9,a-z]
+wiki/images/archive/*
+wiki/images/temp/*
+wiki/images/deleted/*
