@@ -189,17 +189,7 @@ $wgFFmpegLocation = 'extensions/ffmpeg';
 $wgOggThumbLocation = 'extensions/OggThumb/bin/oggThumb';
 
 # skin config
-require_once( "$IP/skins/bootstrap/Bootstrapskin.php" );
-$wgDefaultSkin = "bootstrapskin";
-
-$wgRestrictDisplayTitle = false;
-$wgAllowExternalImages = true;
-
-$to = 'info@mediawikibootstrapskin.co.uk';
-require_once "$IP/skins/bootstrap/extensions/BootStrapSkinContact/BootStrapSkinContact.php";
-
-require_once "$IP/skins/bootstrap/extensions/BootStrapSkinSidebar/BootStrapSkinSidebar.php";
+require_once "$IP/skins/Example/Example.php";
 
 # End of automatically generated settings.
 # Add more configuration options below.
-
