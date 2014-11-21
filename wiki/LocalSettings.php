@@ -70,6 +70,9 @@ $wgDBname = "dsource_wiki";
 $wgDBuser = "dsource";
 $wgDBpassword = "dsource";
 
+## Administrator account
+# admin, password, admin@dsource.in
+
 # MySQL specific settings
 $wgDBprefix = "";
 
