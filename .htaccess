@@ -5,7 +5,7 @@ RewriteEngine On
  
 # Short url for wiki pages
 #RewriteRule ^/?wiki(/.*)?$ %{DOCUMENT_ROOT}/w/index.php [L]
- 
+
 # Redirect to Main Page
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

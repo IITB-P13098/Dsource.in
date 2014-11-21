@@ -87,10 +87,24 @@ $wgEmailAuthentication = true;
 
 ## Database settings
 $wgDBtype = "mysql";
-$wgDBserver = "localhost";
+// $wgDBserver = "localhost";
 $wgDBname = "dsource_wiki";
 $wgDBuser = "dsource";
 $wgDBpassword = "dsource";
+
+if (defined('ENVIRONMENT'))
+{
+  switch (ENVIRONMENT)
+  {
+    case 'development':
+      $wgDBserver = "localhost";
+    break;
+    case 'testing':
+    case 'production':
+      $wgDBserver = "mydbinstance.xyz.us-west-2.rds.amazonaws.com";
+      break;
+  }
+}
 
 ## Administrator account
 # admin, password, admin@dsource.in
