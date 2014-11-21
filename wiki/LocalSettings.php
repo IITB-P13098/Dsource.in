@@ -101,7 +101,7 @@ if (defined('ENVIRONMENT'))
     break;
     case 'testing':
     case 'production':
-      $wgDBserver = "mydbinstance.xyz.us-west-2.rds.amazonaws.com";
+      $wgDBserver = "mydbinstance.cdagtsxe3d8f.us-west-2.rds.amazonaws.com";
       break;
   }
 }
