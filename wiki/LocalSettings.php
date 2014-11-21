@@ -15,6 +15,28 @@ if ( !defined( 'MEDIAWIKI' ) ) {
   exit;
 }
 
+// define('ENVIRONMENT', 'production');
+define('ENVIRONMENT', 'development');
+
+if (defined('ENVIRONMENT'))
+{
+  switch (ENVIRONMENT)
+  {
+    case 'development':
+      // ini_set("display_errors", "1");
+      error_reporting(E_ALL);
+    break;
+  
+    case 'testing':
+    case 'production':
+      error_reporting(0);
+    break;
+
+    default:
+      exit('The application environment is not set correctly.');
+  }
+}
+
 ## Uncomment this to disable output compression
 # $wgDisableOutputCompression = true;
 
