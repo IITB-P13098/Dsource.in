@@ -98,10 +98,14 @@ if (defined('ENVIRONMENT'))
   {
     case 'development':
       $wgDBserver = "localhost";
+      $wgDBuser = "dsource";
+      $wgDBpassword = "dsource";
     break;
     case 'testing':
     case 'production':
       $wgDBserver = "mydbinstance.cdagtsxe3d8f.us-west-2.rds.amazonaws.com";
+      $wgDBuser = "awsuser";
+      $wgDBpassword = "mypassword";
       break;
   }
 }
