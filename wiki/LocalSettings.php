@@ -15,8 +15,8 @@ if ( !defined( 'MEDIAWIKI' ) ) {
   exit;
 }
 
-// define('ENVIRONMENT', 'production');
-define('ENVIRONMENT', 'development');
+define('ENVIRONMENT', 'production');
+// define('ENVIRONMENT', 'development');
 
 if (defined('ENVIRONMENT'))
 {
@@ -65,6 +65,18 @@ $wgScriptExtension = ".php";
 
 ## The protocol and server name to use in fully-qualified URLs
 $wgServer = "http://localhost";
+if (defined('ENVIRONMENT'))
+{
+  switch (ENVIRONMENT)
+  {
+    case 'development':
+      $wgServer = "http://localhost";
+      break;
+    case 'testing':
+    case 'production':
+      $wgServer = "http://54.149.243.172";
+  }
+}
 
 ## The relative URL path to the skins directory
 $wgStylePath = "$wgScriptPath/skins";
