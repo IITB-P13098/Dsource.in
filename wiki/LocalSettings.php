@@ -51,6 +51,22 @@ $wgMetaNamespace = "Project";
 $wgScriptPath = "/dsource.in/wiki";
 $wgArticlePath = "/dsource.in/$1";
 
+if (defined('ENVIRONMENT'))
+{
+  switch (ENVIRONMENT)
+  {
+    case 'development':
+      $wgScriptPath = "/dsource.in/wiki";
+      $wgArticlePath = "/dsource.in/$1";
+      break;
+    case 'testing':
+    case 'production':
+      $wgScriptPath = "/wiki";
+      $wgArticlePath = "/$1";
+      break;
+  }
+}
+
 $actions = array( 'view', 'edit', 'watch', 'unwatch', 'delete','revert', 'rollback',
   'protect', 'unprotect', 'markpatrolled', 'render', 'submit', 'history', 'purge' );
  
@@ -75,6 +91,7 @@ if (defined('ENVIRONMENT'))
     case 'testing':
     case 'production':
       $wgServer = "http://54.149.243.172";
+      break;
   }
 }
 
