@@ -81,6 +81,7 @@ $wgScriptExtension = ".php";
 
 ## The protocol and server name to use in fully-qualified URLs
 $wgServer = "http://localhost";
+
 if (defined('ENVIRONMENT'))
 {
   switch (ENVIRONMENT)
@@ -193,7 +194,11 @@ $wgUpgradeKey = "dc7baa9b5ec2e743";
 
 ## Default skin: you can change the default skin. Use the internal symbolic
 ## names, ie 'cologneblue', 'monobook', 'vector':
-$wgDefaultSkin = "vector";
+
+# skin config
+# require_once "$IP/skins/Example/Example.php";
+require_once( "$IP/skins/strapping/strapping.php" );
+$wgDefaultSkin = "strapping";
 
 ## For attaching licensing metadata to pages, and displaying an
 ## appropriate copyright notice / icon. GNU Free Documentation
@@ -259,9 +264,6 @@ $wgExtensionCredits['specialpage'][] = array(
 require( "$IP/extensions/OggHandler/OggHandler.php" );
 $wgFFmpegLocation = 'extensions/ffmpeg';
 $wgOggThumbLocation = 'extensions/OggThumb/bin/oggThumb';
-
-# skin config
-require_once "$IP/skins/Example/Example.php";
 
 # End of automatically generated settings.
 # Add more configuration options below.
