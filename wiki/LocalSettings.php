@@ -15,7 +15,11 @@ if ( !defined( 'MEDIAWIKI' ) ) {
   exit;
 }
 
-define('ENVIRONMENT', 'production');
+if ($_SERVER['SERVER_NAME'] !== 'localhost')
+  define('ENVIRONMENT', 'production');
+else
+  define('ENVIRONMENT', 'development');
+
 // define('ENVIRONMENT', 'development');
 
 if (defined('ENVIRONMENT'))
